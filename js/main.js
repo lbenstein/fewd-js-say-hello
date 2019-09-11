@@ -7,17 +7,13 @@
   the element from Hint #1?
 
 
-document.getElementsByName("Thing")[0].addEventListener('change', doThing);
-function doThing(){
-   alert('Horray! Someone wrote "' + this.value + '"!')
-
-HTMLInputElementObject.addEventListener('input', (evt) => {
-  console.log('run'); // Do something
-});
+clear out the input field for user convenience. after line 31. one line.
 */
 
 var input = document.getElementById('name');
 input.addEventListener('keydown', printGreeting);
+
+var moveOver = document.querySelector('.col-md-6')
 
 function printGreeting(event) {
     if (event.key === 'Enter') {
@@ -25,13 +21,14 @@ function printGreeting(event) {
         var userName = input.value;
 
         // Create new element (<p>)
-        var newPara = document.createElement ('p');
+        var newPara = document.createElement('p');
 
         // Set element innerText to userName
-        newPara.innerHTML = ("Hello ' + userName + ', nice to meet you!");
+        newPara.innerHTML = 'Hello ' + userName + ', nice to meet you!';
 
         // Append new element (<p>) to DOM
-        document.body.appendChild(newPara);
+        moveOver.appendChild(newPara);
+        event.preventDefault();
     }
 
 }

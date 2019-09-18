@@ -8,12 +8,15 @@
 
 
 clear out the input field for user convenience. after line 31. one line.
+document.getElementById('placeholder').value=null;
+document.forms('form').reset();
+document.getElementById('form').reset();
 */
+
+var moveOver = document.querySelector('.col-md-6')
 
 var input = document.getElementById('name');
 input.addEventListener('keydown', printGreeting);
-
-var moveOver = document.querySelector('.col-md-6')
 
 function printGreeting(event) {
     if (event.key === 'Enter') {
@@ -29,6 +32,7 @@ function printGreeting(event) {
         // Append new element (<p>) to DOM
         moveOver.appendChild(newPara);
         event.preventDefault();
+        document.getElementById('name').userName=();
     }
 
 }

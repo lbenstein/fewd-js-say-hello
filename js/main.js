@@ -32,7 +32,7 @@ function printGreeting(event) {
         // Append new element (<p>) to DOM
         moveOver.appendChild(newPara);
         event.preventDefault();
-        document.getElementById('name').userName=();
+        input.value = '';
     }
 
 }
